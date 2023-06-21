@@ -1,0 +1,19 @@
+PROGRAM TP2_EJ4;
+
+USES DOS,CRT;
+
+VAR
+X:INTEGER;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(2);
+WRITE('Los numeros multiplos de 5 comprendidos entre 1 y 100 son:');
+FOR X:= 1 TO 100 DO
+ BEGIN
+ DELAY(50);
+ IF X MOD 5=0
+ THEN WRITELN(X);
+ END;
+READKEY;
+END.

@@ -1,0 +1,47 @@
+PROGRAM TP7_EJ1;
+USES DOS,CRT;
+
+TYPE
+CIUDADANO=RECORD
+   N:STRING[100];
+   E:INTEGER;
+   S:CHAR;
+   T:STRING[40];
+   D:STRING[100];
+END;
+
+VAR
+X:CIUDADANO;
+PROCEDURE SHQSY(VAR X:CIUDADANO);
+
+BEGIN
+TEXTCOLOR(4);
+TEXTBACKGROUND(15);
+WRITE('Ingresa tu nombre:');
+READLN(X.N);
+WRITE('Ingresa tu edad:');
+READLN(X.E);
+WRITE('Ingresa tu sexo:');
+READLN(X.S);
+WRITE('Ingresa tu telefono:');
+READLN(X.T);
+WRITE('Ingresa tu direccion:');
+READLN(X.D);
+TEXTCOLOR(0);
+TEXTBACKGROUND(0);
+WRITELN('        ');
+TEXTBACKGROUND(15);
+WRITElN('Nombre: ',X.N);
+WRITELN('Edad: ',X.E);
+WRITELN('Sexo: ',X.S);
+WRITELN('Telefono: ',X.T);
+WRITELN('Direccion: ',X.D);
+END;
+
+BEGIN
+CLRSCR;
+SHQSY(X);
+READKEY;
+END.
+
+

@@ -1,0 +1,29 @@
+PROGRAM TP3_EJ6;
+
+USES DOS,CRT;
+
+VAR
+X,I,N:INTEGER;
+R,T:REAL;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(4);
+TEXTBACKGROUND(15);
+WRITE('Ingrese N:');
+READLN(N);
+R:=0;
+X:=1;
+FOR I:=2 TO N DO
+   BEGIN
+   T:=X/I;
+   R:=R+T;
+   END;
+R:=R+X;
+WRITELN('El resultado de la suma es:',R:10:10);
+READKEY;
+END.
+
+
+
+

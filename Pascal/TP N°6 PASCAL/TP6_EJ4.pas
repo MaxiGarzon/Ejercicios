@@ -1,0 +1,36 @@
+PROGRAM TP6_EJ4;
+USES DOS,CRT;
+
+TYPE
+MAXI=ARRAY [1..2,1..5] OF INTEGER;
+
+VAR
+X:MAXI;
+PROCEDURE SHQSY(VAR X:MAXI);
+
+VAR
+I,J,Y:INTEGER;
+
+BEGIN
+TEXTCOLOR(4);
+WRITE('Ingresa tus valores:');
+   FOR I:= 1 TO 1 DO
+       FOR J:= 1 TO 5 DO
+      BEGIN
+      READLN(X[I,J]);
+      END;
+FOR I:= 1 TO 2 DO
+   FOR J:= 1 TO 5 DO
+      BEGIN
+      TEXTCOLOR(2);
+      X[2,J]:=X[1,J]*X[1,J];
+      WRITELN('X[',I,',',J,'] = ',X[I,J]);
+      END;
+END;
+
+BEGIN
+CLRSCR;
+SHQSY(X);
+READKEY;
+END.
+

@@ -1,0 +1,25 @@
+PROGRAM TP3_EJ7;
+
+USES MATH,DOS,CRT;
+
+VAR
+X,I,N:INTEGER;
+T,R:REAL;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(0);
+TEXTBACKGROUND(15);
+WRITE('Ingrese N:');
+READLN(N);
+R:=0;
+X:=1;
+FOR I:=1 TO N DO
+   BEGIN
+   T:=X/2**I;
+   R:=R+T;
+   END;
+R:=R+X;
+WRITELN('El resultado de la suma es:',R);
+READKEY;
+END.

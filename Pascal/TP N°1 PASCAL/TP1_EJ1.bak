@@ -1,0 +1,20 @@
+PROGRAM TP1_EJ1;
+
+USES DOS,CRT;
+
+VAR
+L:INTEGER;
+A,V:INTEGER;
+
+BEGIN
+CLRSCR;
+WRITE('Ingrese un numemero:');
+READLN(L);
+A:=(L*L)*6;
+V:=L*L*L;
+WRITELN('Area:',A);
+WRITELN('Volumen:',V);
+READKEY;
+END.
+
+

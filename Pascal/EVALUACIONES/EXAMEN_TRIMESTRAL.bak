@@ -1,0 +1,25 @@
+PROGRAM EXAMEN_TRIMESTRAL;
+
+USES DOS,CRT;
+
+VAR
+IMB:INTEGER;
+IMN:REAL;
+D:REAL;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(13);
+WRITE('Ingrese el importe bruto de su factura:');
+READLN(IMB);
+D:=(IMB*15)/100;
+IF IMB>20000
+   THEN WRITELN('Su descuento es:',D:2:1)
+   ELSE WRITELN('Sin descuento:',D*0:2:1);
+IMN:=IMB-D;
+IF IMB>20000
+    THEN WRITELN('El importe Neto de su Factura es de:',IMN:2:1)
+    ELSE WRITELN('EL importe Neto de su Factura es de:',IMB);
+READKEY;
+END.
+

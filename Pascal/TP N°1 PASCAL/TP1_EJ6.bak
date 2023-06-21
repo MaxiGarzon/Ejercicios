@@ -1,0 +1,17 @@
+PROGRAM TP1_EJ6;
+
+USES DOS,CRT;
+
+VAR
+X:INTEGER;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(4);
+WRITE('Ingrese un numero:');
+READLN(X);
+IF X>0
+   THEN WRITELN(X,':Es Positivo')
+   ELSE WRITELN(X,':Es Negativo');
+READKEY;
+END.

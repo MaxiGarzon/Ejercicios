@@ -1,0 +1,25 @@
+PROGRAM TP1_EJ2;
+
+USES DOS,CRT;
+
+VAR
+PI:REAL;
+H:INTEGER;
+R:INTEGER;
+A,V:REAL;
+
+BEGIN
+CLRSCR;
+WRITE('Ingrese un valor para PI:');
+READLN(PI);
+WRITE('Ingrese un numero para R:');
+READLN(R);
+WRITE('Ingrese un numero para H:');
+READLN(H);
+A:=(2*(PI*(R*R)))+((2*PI*R)*H);
+V:=(PI*(R*R))*H;
+WRITELN('Area:',A:2:1);
+WRITELN('Volumen:',V:2:1);
+READKEY;
+END.
+

@@ -1,0 +1,20 @@
+PROGRAM TP1_EJ3;
+
+USES DOS,CRT;
+
+VAR
+R:INTEGER;
+V:REAL;
+PI:REAL;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(2);
+WRITE('ingrese un valor para PI:');
+READLN(PI);
+WRITE('Ingrese un valor de Radio:');
+READLN(R);
+V:=(4/3)*PI*(R*R*R);
+WRITELN('Volumen:',V:2:1);
+READKEY;
+END.

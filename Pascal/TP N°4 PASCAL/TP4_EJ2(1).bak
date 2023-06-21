@@ -1,0 +1,25 @@
+PROGRAM TP4_EJ2;
+
+USES DOS,CRT;
+
+VAR
+IDD:ARRAY [1..5] OF INTEGER;
+IND:INTEGER;
+X:INTEGER;
+R:REAL;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(6);
+TEXTBACKGROUND(1);
+FOR IND:= 1 TO 5 DO
+   BEGIN
+   WRITE('Ingrese 5 numeros:');
+   READLN(IDD[IND]);
+   END;
+X:=IDD[1]+IDD[2]+IDD[3]+IDD[4]+IDD[5];
+R:=X/5;
+WRITELN('El promedio de los numeros que ingreso es:',R:2:1);
+READKEY;
+END.
+

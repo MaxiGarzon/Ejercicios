@@ -1,0 +1,58 @@
+PROGRAM TP6_EJ5;
+USES DOS,CRT;
+
+TYPE
+MAXI=ARRAY [1..5,1..3] OF INTEGER;
+
+VAR
+X:MAXI;
+PROCEDURE SHQSY(VAR X:MAXI);
+
+VAR
+I,J,F,C,T,R:INTEGER;
+
+BEGIN
+RANDOMIZE;
+TEXTBACKGROUND(15);
+TEXTCOLOR(0);
+WRITE('Ingresa tus valores:');
+WRITELN(' ');
+FOR I:= 1 TO 4 DO
+   FOR J:= 1 TO 2 DO
+      BEGIN
+      TEXTBACKGROUND(0);
+      R:=RANDOM(14)+1;
+      TEXTCOLOR(R);
+      READLN(X[I,J]);
+      END;
+TEXTBACKGROUND(15);
+TEXTCOLOR(0);
+WRITE('Su Matriz es:');
+WRITELN(' ');
+FOR I:= 1 TO 4 DO
+   FOR J:= 1 TO 2 DO
+      BEGIN
+      X[I,3]:=(X[I,1]+X[I,2]);
+      X[5,J]:=(X[1,J]+X[2,J]+X[3,J]+X[4,J]);
+      END;
+X[5,3]:=X[5,1]+X[5,2];
+FOR I:= 1 TO 5 DO
+   FOR J:= 1 TO 3 DO
+      BEGIN
+      TEXTBACKGROUND(0);
+      R:=RANDOM(14)+1;
+      TEXTCOLOR(R);
+      DELAY(300);
+      WRITELN('X[',I,',',J,'] = ',X[I,J]);
+      END;
+END;
+BEGIN
+CLRSCR;
+SHQSY(X);
+READKEY;
+END.
+
+
+
+
+

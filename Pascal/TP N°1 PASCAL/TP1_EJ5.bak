@@ -1,0 +1,29 @@
+PROGRAM TP1_EJ5;
+
+USES DOS,CRT;
+
+VAR
+A:REAL;
+B:REAL;
+C:REAL;
+X1:REAL;
+X2:REAL;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(3);
+WRITE('Ingrese un valor para A:');
+READLN(A);
+WRITE('Ingrese un valor para B:');
+READLN(B);
+WRITELN('Ingrese un valor para C:');
+READLN(C);
+X1:=-(B)+SQRT((B*B)-4*A*C);
+X2:=-(B)-SQRT((B*B)-4*A*C);
+X1:=X1/(2*A);
+X2:=X2/(2*A);
+WRITELN('El valor de X1 es:',X1:2:1);
+WRITELN('El valor de X2 es:',X2:2:1);
+READKEY;
+END.
+

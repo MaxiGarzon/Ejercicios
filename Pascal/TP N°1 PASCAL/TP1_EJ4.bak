@@ -1,0 +1,24 @@
+PROGRAM TP1_EJ4;
+
+USES DOS,CRT;
+
+VAR
+A:INTEGER;
+B:INTEGER;
+C:INTEGER;
+X:REAL;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(1);
+
+WRITE('Ingrese un valor para A');
+READLN(A);
+WRITE('Ingrese un valor para B');
+READLN(B);
+WRITE('Ingrese un valor para C');
+READLN(C);
+X:=(A+7*C)/(B+2-A)+2*B;
+WRITELN('El valor de X es:',X:2:1);
+READKEY;
+END.

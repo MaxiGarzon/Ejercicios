@@ -1,0 +1,29 @@
+PROGRAM TP4_EJ1;
+
+USES DOS,CRT;
+
+VAR
+C,I:INTEGER;
+X:ARRAY [1..50] OF INTEGER;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(9);
+C:=0;
+WRITELN('Los numeros pares comprendidos entre 1 y 100 son:');
+FOR I:= 1 TO 100 DO
+  BEGIN
+  TEXTCOLOR(6);
+  DELAY(150);
+  IF I MOD 2=0
+    THEN
+    BEGIN
+    C:=C+1;
+    X[C]:=I;
+    WRITELN(X[C])
+    END;
+  END;
+READKEY;
+END.
+
+

@@ -1,0 +1,23 @@
+PROGRAM TP2_EJ5;
+
+USES DOS,CRT;
+
+VAR
+N,X:INTEGER;
+I,C:INTEGER;
+
+BEGIN
+CLRSCR;
+TEXTCOLOR(3);
+WRITE('Ingrese un numero:');
+READLN(N);
+C:=1;
+FOR I:= 1 TO 10 DO
+  BEGIN
+  DELAY(150);
+  X:=N*C;
+  C:=C+1;
+  WRITELN(X);
+  END;
+READKEY;
+END.
